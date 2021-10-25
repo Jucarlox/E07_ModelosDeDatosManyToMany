@@ -2,10 +2,7 @@ package com.example.E07_ModelosDeDatosManyToMany.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +16,7 @@ public class Artist {
     private Long id;
     private String name;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     private List<Song> songs = new ArrayList<>();
 
     public void addSong(Song s) {

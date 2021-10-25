@@ -17,10 +17,12 @@ public class Playlist {
     private String name;
     private String descripcion;
 
-    @ManyToOne
+    @OneToMany(fetch = FetchType.EAGER)
     private List<Song> songs = new ArrayList<>();
 
     @Builder.Default
     @OneToMany
     private List<AddedTo> addedTos = new ArrayList<>();
+
+
 }

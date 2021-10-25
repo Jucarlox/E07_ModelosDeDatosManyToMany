@@ -29,7 +29,7 @@ public class AddedTo {
     private String datetime;
     private String order;
 
-    public void addToSong(Song s) {
+    /*public void addToSong(Song s) {
         song = s;
         s.getPlaylist().getSongs().add(s);
     }
@@ -37,7 +37,7 @@ public class AddedTo {
     public void removeFromSong(Song s) {
         s.getPlaylist().getSongs().remove(this);
         song = null;
-    }
+    }*/
 
 
 
